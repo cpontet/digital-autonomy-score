@@ -11,17 +11,15 @@ DAS produces two scores for any technology component or system:
 
 These two scores place the system on a **prioritization quadrant** that drives action:
 
-```
-                    Portability
-                10 ┌──────────┬──────────┐
-                   │   BLUE   │  GREEN   │
-                   │ Migrate  │ Maintain │
-                 5 ├──────────┼──────────┤
-                   │   RED    │  YELLOW  │
-                   │ Replace  │Modernize │
-                 0 └──────────┴──────────┘
-                   0          5          10
-                        Sovereignty
+```mermaid
+quadrantChart
+    title DAS Prioritization Quadrant
+    x-axis "Low Sovereignty" --> "High Sovereignty"
+    y-axis "Low Portability" --> "High Portability"
+    quadrant-1 "GREEN: Maintain & Leverage"
+    quadrant-2 "BLUE: Migrate to Sovereign"
+    quadrant-3 "RED: Replace ASAP"
+    quadrant-4 "YELLOW: Modernize"
 ```
 
 ## Quick Start

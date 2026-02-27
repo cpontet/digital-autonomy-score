@@ -4,23 +4,15 @@
 
 The sovereignty × portability quadrant maps every assessed system into one of four zones, each with a distinct strategic posture.
 
-```
-                        PORTABILITY (CPS)
-                    10 ┌──────────┬──────────┐
-                       │          │          │
-                       │   BLUE   │  GREEN   │
-                       │  Migrate │ Maintain │
-                       │  to sov. │    &     │
-                    5  │ altern.  │ leverage │
-                       ├──────────┼──────────┤
-                       │          │          │
-                       │   RED    │  YELLOW  │
-                       │  Urgent: │Modernize │
-                       │ migrate/ │   for    │
-                       │ replace  │portabil. │
-                    0  └──────────┴──────────┘
-                       0          5          10
-                            SOVEREIGNTY (S)
+```mermaid
+quadrantChart
+    title DAS Prioritization Quadrant
+    x-axis "Low Sovereignty (S)" --> "High Sovereignty (S)"
+    y-axis "Low Portability (CPS)" --> "High Portability (CPS)"
+    quadrant-1 "GREEN: Maintain & Leverage"
+    quadrant-2 "BLUE: Migrate to Sovereign"
+    quadrant-3 "RED: Urgent — Migrate or Replace"
+    quadrant-4 "YELLOW: Modernize for Portability"
 ```
 
 **Threshold**: The midpoint at 5 divides the quadrants. Systems scoring exactly 5 on either axis should be treated as borderline and assessed in context.
