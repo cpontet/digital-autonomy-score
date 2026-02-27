@@ -1,4 +1,4 @@
-# Portability Scale — Refined Assessment
+# DAS Portability Scale
 
 ## Critique of the Original Scale
 

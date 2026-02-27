@@ -1,6 +1,6 @@
-# Automated Signals — Sub-Agent Specification
+# Automated Signals — DAS Sub-Agent Specification
 
-This document maps machine-detectable signals to each sovereignty and portability sub-dimension. It serves as the specification for a future automated assessment sub-agent that can analyze a codebase and produce preliminary scores.
+This document maps machine-detectable signals to each sovereignty and portability sub-dimension. It serves as the specification for a future automated DAS sub-agent that can analyze a codebase and produce preliminary Digital Autonomy Scores.
 
 ## Design Principles
 

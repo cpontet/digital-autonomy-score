@@ -1,12 +1,12 @@
-# Sovereignty & Portability Assessment Framework
+# Digital Autonomy Score (DAS)
 
 ## Purpose
 
-This framework provides a structured, repeatable methodology for assessing the **digital sovereignty** and **portability** of technology components and systems. It refines and extends the original assessment scales from the [presentation material](../content/12-assessment-tools.md) into a comprehensive toolkit suitable for both manual expert assessment and future automated analysis.
+The **Digital Autonomy Score (DAS)** is a structured, repeatable methodology for assessing the **digital sovereignty** and **portability** of technology components and systems. It refines and extends the original assessment scales from the [presentation material](../content/12-assessment-tools.md) into a comprehensive toolkit suitable for both manual expert assessment and future automated analysis.
 
-## Why a Refined Framework?
+## Why DAS?
 
-The original 0–10 sovereignty and portability scales in the presentation are useful for building intuition, but contain logical inconsistencies that prevent reliable, repeatable scoring. This framework resolves those issues while preserving the core two-axis model and prioritization quadrant.
+The original 0–10 sovereignty and portability scales in the presentation are useful for building intuition, but contain logical inconsistencies that prevent reliable, repeatable scoring. DAS resolves those issues while preserving the core two-axis model and prioritization quadrant.
 
 Key improvements:
 
@@ -15,7 +15,7 @@ Key improvements:
 - **Composite scoring**: weakest-link principle ensures a system is only as portable as its least portable layer
 - **Structured process**: phased assessment from quick screening to detailed analysis
 
-## How to Use This Framework
+## How to Use DAS
 
 ### Quick Assessment (30 minutes)
 
@@ -34,7 +34,7 @@ Key improvements:
 
 ### Building Automated Tooling
 
-See [automated-signals.md](automated-signals.md) for machine-detectable signals mapped to each sub-dimension, serving as the specification for a future assessment sub-agent.
+See [automated-signals.md](automated-signals.md) for machine-detectable signals mapped to each sub-dimension, serving as the specification for a future DAS sub-agent.
 
 ## Document Index
 
@@ -45,10 +45,10 @@ See [automated-signals.md](automated-signals.md) for machine-detectable signals 
 | [assessment-process.md](assessment-process.md) | Step-by-step guide: scope & inventory, quick screening, detailed scoring, quadrant placement, recommendations |
 | [quadrant-and-actions.md](quadrant-and-actions.md) | Prioritization matrix with detailed action playbooks per quadrant |
 | [reference-assessments.md](reference-assessments.md) | Worked examples of well-known technology stacks scored under the refined framework |
-| [automated-signals.md](automated-signals.md) | Machine-detectable signals for each sub-dimension, specification for future automated assessment |
+| [automated-signals.md](automated-signals.md) | Machine-detectable signals for each sub-dimension, specification for future DAS sub-agent |
 
 ## Relationship to Original Material
 
-This framework builds on and replaces the assessment scales in [`docs/content/12-assessment-tools.md`](../content/12-assessment-tools.md). The original scales remain useful as teaching aids for building sovereignty intuition. This framework is the operational version for actual decision-making.
+DAS builds on and replaces the assessment scales in [`docs/content/12-assessment-tools.md`](../content/12-assessment-tools.md). The original scales remain useful as teaching aids for building sovereignty intuition. DAS is the operational version for actual decision-making.
 
-The strategic analysis tools (Wardley Mapping, Core Domain Charts, ADRs) described in the original material remain unchanged and complement this framework — they help identify *which* components to assess and *how* to act on results.
+The strategic analysis tools (Wardley Mapping, Core Domain Charts, ADRs) described in the original material remain unchanged and complement DAS — they help identify *which* components to assess and *how* to act on results.

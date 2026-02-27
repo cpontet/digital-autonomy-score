@@ -1,4 +1,4 @@
-# Sovereignty Scale — Refined Assessment
+# DAS Sovereignty Scale
 
 ## Critique of the Original Scale
 
