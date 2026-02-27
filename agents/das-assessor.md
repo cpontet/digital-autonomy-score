@@ -8,6 +8,8 @@ tools:
   - Glob
   - Bash
   - Task
+skills:
+  - mermaid-das
 description: |
   Trigger when the user asks to assess sovereignty, portability, digital autonomy,
   vendor lock-in, or CLOUD Act exposure of a codebase. Also trigger on phrases like
