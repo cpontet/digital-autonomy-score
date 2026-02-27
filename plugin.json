@@ -1,0 +1,5 @@
+{
+  "name": "das",
+  "description": "Digital Autonomy Score — assess sovereignty and portability of a codebase",
+  "agents": ["agents/das-assessor.md"]
+}
