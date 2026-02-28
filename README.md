@@ -68,4 +68,6 @@ docs/
 
 ## License
 
-Research and documentation project. Content derived from the presentation *"Géopolitique et souveraineté numérique — enjeux, implications et opportunités"*.
+This work is licensed under [Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/).
+
+[Wardley Mapping](https://wardleymaps.com) is courtesy of Simon Wardley, CC BY-SA 4.0.
