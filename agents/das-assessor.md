@@ -12,6 +12,10 @@ skills:
   - mermaid-das
   - wardley-das
   - vendor-db
+  - remediation-playbook
+  - region-jurisdiction
+  - eu-regulatory
+  - abstraction-patterns
 description: |
   Trigger when the user asks to assess sovereignty, portability, digital autonomy,
   vendor lock-in, or CLOUD Act exposure of a codebase. Also trigger on phrases like
