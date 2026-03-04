@@ -1,5 +1,6 @@
 {
   "name": "das",
   "description": "Digital Autonomy Score — assess sovereignty and portability of a codebase",
+  "commands": ["commands/das.md"],
   "agents": ["agents/das-assessor.md"]
 }
