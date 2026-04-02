@@ -84,9 +84,21 @@ See [automated-signals.md](assessment/automated-signals.md) for machine-detectab
 | [reference-assessments.md](assessment/reference-assessments.md) | Worked examples of well-known technology stacks scored under the framework |
 | [automated-signals.md](assessment/automated-signals.md) | Machine-detectable signals for each sub-dimension, specification for future DAS sub-agent |
 
-## Complementary Tools
+## Wardley Mapping Integration
 
-DAS focuses on scoring individual technology components and systems. It complements strategic analysis tools such as Wardley Mapping (to identify *which* components to assess), Core Domain Charts (to prioritize business-critical systems), and Architecture Decision Records (to document *how* to act on results).
+DAS assessments include a **Wardley Map** alongside the quadrant chart. [Wardley Maps](https://wardleymaps.com) visualise the value chain of a system — from user needs down through application components to infrastructure — and position each component along an evolution axis from Genesis (novel, custom-built) to Commodity (standardised, ubiquitous).
+
+In a DAS context, Wardley Maps serve three purposes:
+
+1. **Identify what to assess** — Map the system's value chain first, then run DAS on each component. This prevents blind spots: you score what matters to the user, not just what's technically visible.
+2. **Visualise sovereignty risk** — Components with low sovereignty scores (S ≤ 3) are annotated with risk notes and `evolve` arrows showing the desired migration target. The map makes it immediately clear where foreign-controlled dependencies sit in your value chain.
+3. **Plan migration sequencing** — The dependency links on the map reveal which components must migrate first. A database migration must happen before the application layer can move — the map makes this constraint visible.
+
+DAS generates Wardley Maps in [OWM (Online Wardley Maps)](https://onlinewardleymaps.com) syntax, which can be pasted directly into the renderer to produce an interactive map.
+
+## Other Complementary Tools
+
+DAS also complements Core Domain Charts (to prioritize business-critical systems for assessment) and Architecture Decision Records (to document the decisions made based on DAS results).
 
 ## Author
 
