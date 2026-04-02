@@ -26,10 +26,9 @@ If a GitHub URL was provided, clone it first then assess.
 
 Use the Task tool to launch the **das-assessor** agent with this prompt:
 
-> Run a full DAS assessment on the codebase. Follow your complete execution steps:
-> scan all 6 phases, decompose into layers, score every sub-dimension with evidence,
-> compute composites, place on quadrant, generate flags, write recommended actions,
-> produce the Mermaid quadrantChart, produce the Wardley Map, and output the full
-> structured report.
+> Run a full DAS assessment on the codebase. Follow your orchestration steps:
+> conduct the context interview, launch the scanner, launch the scorer,
+> conduct the gap-fill interview if needed, launch the reporter, and
+> present the full structured report to the user.
 
 After the agent completes, present the full report to the user.

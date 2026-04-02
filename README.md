@@ -69,9 +69,15 @@ Answer three questions about your system:
 4. Place on the quadrant and develop action plans per [quadrant-and-actions.md](assessment/quadrant-and-actions.md)
 5. Calibrate your scores against [reference-assessments.md](assessment/reference-assessments.md)
 
-### Building Automated Tooling
+### Automated Assessment with Claude Code
 
-See [automated-signals.md](assessment/automated-signals.md) for machine-detectable signals mapped to each sub-dimension, serving as the specification for a future DAS sub-agent.
+This repository is also a **Claude Code plugin**. Install it and run `/das` to get an automated assessment of any codebase:
+
+1. Install the plugin: `claude plugin add /path/to/digital-autonomy-score`
+2. Navigate to the codebase you want to assess
+3. Run `/das` — the agent will interview you about business context, scan the codebase, score all dimensions, and produce a full report with quadrant placement, Mermaid chart, Wardley Map, and recommended actions
+
+You can also point it at a remote repo: `/das https://github.com/org/repo`
 
 ## Document Index
 
