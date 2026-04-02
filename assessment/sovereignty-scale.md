@@ -1,28 +1,24 @@
 # DAS Sovereignty Scale
 
-## Critique of the Original Scale
+## Design Rationale
 
-The original sovereignty scale (0–10) in the presentation has several logical issues that prevent consistent, repeatable scoring:
+The DAS sovereignty scale addresses several challenges that arise when attempting to score sovereignty on a single 0–10 axis:
 
-### 1. License Ordering is Inverted
+### Why Copyleft Ranks Above Permissive Licenses
 
-The original scale places GPL/AGPL (score 5) *below* MIT/BSD/Apache (score 7). This is backwards from a sovereignty perspective: **copyleft licenses prevent proprietary capture**. A GPL-licensed project cannot be taken proprietary by a vendor — it structurally preserves sovereignty. Permissive licenses (MIT, Apache) allow any party to create closed forks, reducing long-term sovereignty guarantees.
+**Copyleft licenses prevent proprietary capture.** A GPL-licensed project cannot be taken proprietary by a vendor — it structurally preserves sovereignty. Permissive licenses (MIT, Apache) allow any party to create closed forks, reducing long-term sovereignty guarantees. Therefore, strong copyleft (GPL, AGPL) scores higher than permissive (MIT, BSD, Apache).
 
-### 2. Duplicate and Conflated Entries
+### Three Independent Dimensions
 
-Mastodon appears at both score 5 ("GPL open-source") and score 9 ("EU-compliant open-source"). This reveals the scale conflates three independent dimensions — **jurisdiction**, **licensing**, and **standardization** — into a single axis, creating contradictions.
+Sovereignty risk comes from three distinct sources — **jurisdiction**, **licensing**, and **governance** — that do not always move together. A technology can be open-source yet governed by a US entity, or proprietary yet EU-headquartered. The headline scale below provides a combined view; the sub-dimensions (S1–S3) allow precise analysis when these dimensions diverge.
 
-### 3. Non-Linear Comparison
+### Governance Matters
 
-Proprietary EU software (score 3) vs. open-source US-governed software (score 5–7) represents fundamentally different *kinds* of sovereignty risk. An EU proprietary vendor may be preferable to a US-governed open-source foundation depending on the threat model.
+*Who controls the project's evolution* has a direct impact on sovereignty. The Linux Foundation is a US entity; the Eclipse Foundation is based in Belgium. This distinction matters enormously for long-term sovereignty and is explicitly captured in sub-dimension S3.
 
-### 4. Missing Governance Dimension
+### Infrastructure vs. Application Choices
 
-The original scale ignores *who controls the project's evolution*. The Linux Foundation is a US entity; the Eclipse Foundation is based in Belgium. This distinction matters enormously for long-term sovereignty but is invisible in the original scale.
-
-### 5. Infrastructure Standards at Score 10
-
-Score 10 includes HTTP, TCP/IP, and SMTP — foundational infrastructure standards that organizations don't "choose" in the way they choose application software. This conflates infrastructure with decision-relevant technology choices.
+Foundational infrastructure standards (HTTP, TCP/IP, SMTP) score 10 for sovereignty because they are governed multilaterally and cannot be captured. However, organizations don't "choose" these the way they choose application software — DAS assessments typically focus on decision-relevant technology choices.
 
 ---
 
@@ -44,14 +40,13 @@ The refined scale corrects the ordering and provides clearer criteria. The key p
 | **9** | Federated Open Protocols | Open-source with strong licenses AND based on federated, open protocols with multiple independent implementations. No single entity can control the ecosystem. | Matrix protocol (multiple clients/servers), ActivityPub ecosystem (Mastodon, PeerTube, Pixelfed), XMPP |
 | **10** | Ratified International Standards | Ratified by international standards bodies (IETF, W3C, ISO, OASIS). Governance is multilateral. Multiple independent implementations exist. | HTTP/2 (IETF RFC 7540), HTML5 (W3C), PDF (ISO 32000), SQL (ISO 9075), SMTP (IETF RFC 5321) |
 
-### Key Changes from Original
+### Scale Design Highlights
 
-1. **GPL/AGPL moved from 5 → 8**: copyleft provides structural sovereignty protection
-2. **MIT/Apache moved from 7 → 5–6**: permissive licenses allow proprietary capture
-3. **Governance split introduced**: scores 5 vs. 6 distinguish US-governed from EU/neutral-governed projects
-4. **Mastodon consolidated**: scores once at 8 (AGPL copyleft) — not duplicated
-5. **Score 9 refined**: requires both open protocol AND multiple independent implementations
-6. **Score 10 clarified**: specifically ratified *international* standards with multilateral governance
+1. **Copyleft at 8**: GPL/AGPL provides structural sovereignty protection — prevents proprietary capture
+2. **Permissive at 5–6**: MIT/Apache/BSD allow proprietary forks, scoring lower than copyleft
+3. **Governance split**: scores 5 vs. 6 distinguish US-governed from EU/neutral-governed projects with the same license type
+4. **Score 9 requires federation**: both open protocol AND multiple independent implementations — no single entity can control the ecosystem
+5. **Score 10 is multilateral**: specifically ratified *international* standards with multilateral governance (IETF, W3C, ISO)
 
 ---
 

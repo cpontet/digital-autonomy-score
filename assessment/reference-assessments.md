@@ -185,7 +185,7 @@ Cap applies: P4_system = 2 (≤ 2), CPS capped at 4 regardless.
 
 ## 6. Python/Flask on OVHcloud with ActivityPub
 
-**System:** Public sector citizen portal with Python/Flask backend, React frontend, Docker containers on OVHcloud, using ActivityPub for some services. (From the original presentation quiz, Scenario 2.)
+**System:** Public sector citizen portal with Python/Flask backend, React frontend, Docker containers on OVHcloud, using ActivityPub for some services.
 
 ### Sovereignty Assessment
 
@@ -209,17 +209,9 @@ Cap applies: P4_system = 2 (≤ 2), CPS capped at 4 regardless.
 
 **Quadrant: Green** (S=8, CPS=7) — Sovereign and portable. Maintain and leverage.
 
-**Comparison to original:** The original presentation scored this 8–9 for sovereignty and 7–8 for portability. The refined framework produces S=8, CPS=7 — consistent, but now grounded in explicit sub-dimension analysis.
-
 ---
 
-## 7. Original Quiz Scenarios Re-Scored
-
-### Scenario 1: Managed MongoDB Atlas on AWS (US Region)
-
-**Original scores:** Sovereignty 4, Portability 7
-
-**Refined assessment:**
+## 7. Managed MongoDB Atlas on AWS (US Region)
 
 | Dimension | Score | Rationale |
 |-----------|:-----:|-----------|
@@ -237,21 +229,13 @@ Cap applies: P4_system = 2 (≤ 2), CPS capped at 4 regardless.
 | P5: Migration | 4 | 6–12 months to migrate to PostgreSQL or another DB; query language rewrite needed |
 | **CPS** | **4.4 → 4** | 0.15×6 + 0.30×5 + 0.20×3 + 0.20×4 + 0.15×4 = 4.4 |
 
-**Revised: S=2, CPS=4** — Red quadrant, not Green as the original scoring implied.
+**Result: S=2, CPS=4** — Red quadrant.
 
-**Key insight:** The original sovereignty score of 4 was generous. Atlas on AWS US region, owned by a US company under CLOUD Act, scores much lower when jurisdictional exposure is properly weighted. The original portability score of 7 overstated because it only considered code/runtime portability and ignored the proprietary query language and data migration complexity.
+**Key insight:** Jurisdictional exposure (US company, CLOUD Act, US-hosted) dominates the sovereignty score. Portability is constrained by the proprietary query language (not SQL) and vendor-specific features (Atlas Search, Triggers) that have no standard equivalent.
 
-### Scenario 2: Python/Flask + ActivityPub on OVHcloud
+---
 
-**Original scores:** Sovereignty 8–9, Portability 7–8
-
-**Refined: S=8, CPS=7** — See detailed assessment above. Closely aligned with original, validating that this scenario was well-scored originally.
-
-### Scenario 3: Windows-Only C++ Trading App via Microsoft Store
-
-**Original scores:** Sovereignty 0, Portability 2
-
-**Refined assessment:**
+## 8. Windows-Only C++ Trading App via Microsoft Store
 
 | Dimension | Score | Rationale |
 |-----------|:-----:|-----------|
@@ -271,19 +255,19 @@ Cap applies: P4_system = 2 (≤ 2), CPS capped at 4 regardless.
 
 Cap applies: P4 = 1 (≤ 2), CPS capped at 4. Formula gives 2, which is below cap.
 
-**Revised: S=0, CPS=2** — Red quadrant. Consistent with original scores. This scenario was accurately assessed in the original presentation.
+**Result: S=0, CPS=2** — Red quadrant. Complete vendor lock-in across all dimensions.
 
 ---
 
 ## Summary Table
 
-| System | S (orig) | S (refined) | CPS (orig) | CPS (refined) | Quadrant |
-|--------|:--------:|:-----------:|:----------:|:--------------:|:--------:|
-| PostgreSQL on EU VM | — | 8 | — | 8 | Green |
-| Microsoft 365 | — | 0 | — | 2 | Red |
-| Self-hosted GitLab CE | — | 6 | — | 6 | Green |
-| Salesforce CRM | — | 0 | — | 2 | Red |
-| Docker + Spring Boot + AWS Aurora | — | 1 | — | 4 | Red |
-| Python/Flask + ActivityPub on OVHcloud | 8–9 | 8 | 7–8 | 7 | Green |
-| MongoDB Atlas on AWS | 4 | 2 | 7 | 4 | Red (was borderline Green) |
-| Windows C++ Trading App | 0 | 0 | 2 | 2 | Red |
+| System | S | CPS | Quadrant |
+|--------|:---:|:---:|:--------:|
+| PostgreSQL on EU VM | 8 | 8 | Green |
+| Microsoft 365 | 0 | 2 | Red |
+| Self-hosted GitLab CE | 6 | 6 | Green |
+| Salesforce CRM | 0 | 2 | Red |
+| Docker + Spring Boot + AWS Aurora | 1 | 4 | Red |
+| Python/Flask + ActivityPub on OVHcloud | 8 | 7 | Green |
+| MongoDB Atlas on AWS | 2 | 4 | Red |
+| Windows C++ Trading App | 0 | 2 | Red |

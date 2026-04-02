@@ -1,36 +1,32 @@
 # DAS Portability Scale
 
-## Critique of the Original Scale
+## Design Rationale
 
-The original portability scale (0–10) in the presentation focuses exclusively on code/runtime portability and has several issues:
+The DAS portability scale goes beyond code/runtime portability to capture the full picture of what it takes to move a system. Key design decisions:
 
-### 1. Docker is Not Portability
+### Docker is Not Portability
 
-Docker (score 7) is a packaging format — a shipping box. It says nothing about what's *inside*. A containerized vendor-locked application (e.g., an app hardwired to AWS DynamoDB, packaged in Docker) is NOT portable. The container moves; the application doesn't.
+Docker is a packaging format — a shipping box. It says nothing about what's *inside*. A containerized vendor-locked application (e.g., an app hardwired to AWS DynamoDB, packaged in Docker) is NOT portable. The container moves; the application doesn't. Therefore, containers only score high (9) when their *contents* are also portable.
 
-### 2. Web Apps Should Rank Above Containers
+### Five Dimensions, Not One
 
-Web applications (score 8) provide inherently higher end-user portability than containers (score 7). A web app runs on any device with a browser — no container runtime needed. The original ordering is correct directionally but the gap should be wider, and the rationale needs clarification.
+Code/runtime portability alone is misleading. The hardest portability challenges are:
+- **Data portability (P2)**: Can you export and import your data? Data gravity is the primary lock-in vector.
+- **API portability (P3)**: Do integrations use standard protocols? Can you swap connected services without rewriting?
+- **Operational portability (P4)**: Can you actually run this elsewhere? Are skills, tooling, and providers available?
+- **Migration feasibility (P5)**: What's the practical effort, timeline, and risk to move?
 
-### 3. Single-Dimension Assessment
+A system with perfectly portable code but completely locked-in data (e.g., Salesforce with extensive custom objects) may appear portable but isn't. The five sub-dimensions prevent this illusion.
 
-The scale measures only code/runtime portability. In practice, the hardest portability challenges are:
-- **Data portability**: Can you export and import your data? (Data gravity is the primary lock-in vector)
-- **API portability**: Do integrations use standard protocols?
-- **Operational portability**: Can you actually run this elsewhere?
-- **Migration feasibility**: What's the practical effort to move?
+### Composite Systems and the Weakest-Link Principle
 
-A system with perfectly portable code but completely locked-in data (e.g., Salesforce with extensive custom objects) scores misleadingly high on the original scale.
-
-### 4. Composite Systems Ignored
-
-Real projects are stacks, not single components. A "Docker + Spring Boot + AWS Aurora" system has different portability at each layer. The original scale provides no guidance for scoring composite systems.
+Real projects are stacks, not single components. A "Docker + Spring Boot + AWS Aurora" system has different portability at each layer. DAS scores each layer independently, then takes the minimum across layers — a system is only as portable as its least portable component.
 
 ---
 
 ## P1: Code/Runtime Portability (Refined)
 
-The original code/runtime scale is largely correct. Refined version with clearer ordering:
+Code and runtime portability — how easily can the software run on a different platform?
 
 | Score | Category | Description | Examples |
 |:-----:|----------|-------------|----------|
