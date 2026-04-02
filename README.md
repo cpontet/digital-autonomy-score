@@ -33,6 +33,7 @@ The CPS ranges from **0** (immovable) to **10** (environment-independent). For c
 These two scores place the system on a **prioritization quadrant** that drives action:
 
 ```mermaid
+%%{init: {"quadrantChart": {"quadrant1Fill": "#2d6a4f", "quadrant2Fill": "#1d3557", "quadrant3Fill": "#9d0208", "quadrant4Fill": "#e9c46a", "quadrant1TextFill": "#ffffff", "quadrant2TextFill": "#ffffff", "quadrant3TextFill": "#ffffff", "quadrant4TextFill": "#000000"}} }%%
 quadrantChart
     title DAS Prioritization Quadrant
     x-axis "Low Sovereignty" --> "High Sovereignty"

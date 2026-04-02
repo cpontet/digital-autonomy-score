@@ -18,6 +18,7 @@ frequently produce subtly broken Mermaid syntax.
 ## quadrantChart Syntax Spec
 
 ```
+%%{init: {"quadrantChart": {"quadrant1Fill": "#2d6a4f", "quadrant2Fill": "#1d3557", "quadrant3Fill": "#9d0208", "quadrant4Fill": "#e9c46a", "quadrant1TextFill": "#ffffff", "quadrant2TextFill": "#ffffff", "quadrant3TextFill": "#ffffff", "quadrant4TextFill": "#000000"}} }%%
 quadrantChart
     title [Chart Title]
     x-axis "Low Label" --> "High Label"
@@ -30,7 +31,8 @@ quadrantChart
 ```
 
 Rules:
-- The block starts with `quadrantChart` on its own line (no backtick fence — that wraps the whole block).
+- The block MUST start with the `%%{init:}%%` directive on its first line to set quadrant colors (green, blue, red, yellow).
+- `quadrantChart` follows on the next line (no backtick fence — that wraps the whole block).
 - Every subsequent line is indented 4 spaces.
 - `x-axis` and `y-axis` use `"Low" --> "High"` with arrow syntax.
 - Quadrant numbering follows **math convention**:
@@ -65,6 +67,7 @@ Example: S = 7.2, CPS = 4.5 → `[0.72, 0.45]`
 Use after assessing a single system:
 
 ```mermaid
+%%{init: {"quadrantChart": {"quadrant1Fill": "#2d6a4f", "quadrant2Fill": "#1d3557", "quadrant3Fill": "#9d0208", "quadrant4Fill": "#e9c46a", "quadrant1TextFill": "#ffffff", "quadrant2TextFill": "#ffffff", "quadrant3TextFill": "#ffffff", "quadrant4TextFill": "#000000"}} }%%
 quadrantChart
     title DAS — [System Name]
     x-axis "Low Sovereignty" --> "High Sovereignty"
@@ -85,6 +88,7 @@ Replace `[System Name]` with the actual name and `[S/10, CPS/10]` with computed 
 Use when comparing multiple systems in a single chart:
 
 ```mermaid
+%%{init: {"quadrantChart": {"quadrant1Fill": "#2d6a4f", "quadrant2Fill": "#1d3557", "quadrant3Fill": "#9d0208", "quadrant4Fill": "#e9c46a", "quadrant1TextFill": "#ffffff", "quadrant2TextFill": "#ffffff", "quadrant3TextFill": "#ffffff", "quadrant4TextFill": "#000000"}} }%%
 quadrantChart
     title DAS Portfolio Overview
     x-axis "Low Sovereignty" --> "High Sovereignty"
@@ -126,6 +130,7 @@ Wrap the block in a fenced code block with language `mermaid`:
 
 ````
 ```mermaid
+%%{init: {"quadrantChart": {"quadrant1Fill": "#2d6a4f", ...}} }%%
 quadrantChart
     ...
 ```

@@ -5,6 +5,7 @@
 The sovereignty × portability quadrant maps every assessed system into one of four zones, each with a distinct strategic posture.
 
 ```mermaid
+%%{init: {"quadrantChart": {"quadrant1Fill": "#2d6a4f", "quadrant2Fill": "#1d3557", "quadrant3Fill": "#9d0208", "quadrant4Fill": "#e9c46a", "quadrant1TextFill": "#ffffff", "quadrant2TextFill": "#ffffff", "quadrant3TextFill": "#ffffff", "quadrant4TextFill": "#000000"}} }%%
 quadrantChart
     title DAS Prioritization Quadrant
     x-axis "Low Sovereignty (S)" --> "High Sovereignty (S)"
