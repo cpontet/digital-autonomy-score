@@ -32,3 +32,6 @@ Use the Task tool to launch the **das-assessor** agent with this prompt:
 > present the full structured report to the user.
 
 After the agent completes, present the full report to the user.
+
+When the agent finishes, it will offer a complementary **SEAL assessment** (EU Cloud
+Sovereignty Framework). You can also run that separately at any time with `/seal`.

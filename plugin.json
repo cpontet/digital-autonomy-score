@@ -1,15 +1,17 @@
 {
   "name": "das",
   "description": "Digital Autonomy Score — assess sovereignty and portability of a codebase",
-  "commands": ["commands/das.md"],
+  "commands": ["commands/das.md", "commands/seal.md"],
   "agents": [
     "agents/das-assessor.md",
     "agents/das-scanner.md",
     "agents/das-scorer.md",
-    "agents/das-reporter.md"
+    "agents/das-reporter.md",
+    "agents/das-seal-assessor.md"
   ],
   "skills": [
     "skills/vendor-db/SKILL.md",
+    "skills/seal-framework/SKILL.md",
     "skills/governance-db/SKILL.md",
     "skills/migration-paths/SKILL.md",
     "skills/region-jurisdiction/SKILL.md",

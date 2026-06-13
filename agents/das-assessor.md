@@ -32,6 +32,10 @@ You do not scan code or score dimensions yourself. You conduct user interviews, 
 | **das-scorer** | Scores dimensions from signals + context | Scored dimensions with confidence, evidence, composites, flags |
 | **das-reporter** | Generates the final markdown report | Complete DAS report with Mermaid chart, Wardley Map, actions |
 
+After presenting the DAS report you may also offer the **das-seal-assessor** — a complementary
+assessment against the EU Cloud Sovereignty Framework (SEAL levels across 8 objectives). It is
+optional and reuses your interview context and scanner signals (see Step 10).
+
 # Principles
 
 1. **Signals suggest, humans decide.** You produce *preliminary* scores and flag areas for human review.
@@ -225,6 +229,34 @@ Use Task to spawn the **das-reporter** agent:
 ## Step 9: Present Report
 
 Output the reporter's result to the user. Do not add additional commentary — the report is self-contained.
+
+## Step 10: Offer Complementary SEAL Assessment
+
+After presenting the report, use AskUserQuestion to offer the optional **SEAL assessment** —
+the EU Cloud Sovereignty Framework view (SEAL-0 to SEAL-4 across the eight Sovereignty
+Objectives, with recommendations to raise each level). Frame it as a complement to the DAS
+score, useful for EU procurement and regulatory contexts.
+
+- **If the user accepts:** use Task to spawn the **das-seal-assessor** agent, passing your
+  already-collected data so it does **not** re-scan or re-interview:
+
+  > Run a SEAL assessment. The DAS context interview and code scan are already done — reuse them
+  > (skip your Steps 3 and 4). Ask only SEAL-specific gap questions if needed, then score all
+  > eight Sovereignty Objectives, compute the Sovereignty Score and minimum SEAL, generate
+  > recommendations, and add a "Relationship to DAS" note using the DAS scores below.
+  >
+  > ## Interview Context
+  > [paste the interview context table]
+  >
+  > ## Raw Scan Signals
+  > [paste the complete scanner output]
+  >
+  > ## DAS Scores (for the Relationship-to-DAS note)
+  > [paste the final S and CPS composites and key sub-dimension scores]
+
+  Then present the SEAL report to the user.
+
+- **If the user declines:** stop. The DAS report stands on its own.
 
 ---
 

@@ -79,6 +79,31 @@ This repository is also a **Claude Code plugin**. Install it and run `/das` to g
 
 You can also point it at a remote repo: `/das https://github.com/org/repo`
 
+Run `/seal` for the complementary **EU Cloud Sovereignty Framework** assessment (see below). At the end of a `/das` run, the agent also offers it as an add-on.
+
+## EU Cloud Sovereignty Framework (SEAL)
+
+DAS is complemented by an assessment aligned with the **European Commission's Cloud Sovereignty Framework v1.2.1 (Oct. 2025)**. Where the DAS Sovereignty (S) score answers *"can a foreign entity control or compel access?"* on a 0–10 scale, the SEAL assessment scores a system against the Commission's **eight Sovereignty Objectives**, each on a five-level assurance scale:
+
+| | Sovereignty Objectives | SEAL levels |
+|---|---|---|
+| What | SOV-1 Strategic · SOV-2 Legal & Jurisdictional · SOV-3 Data & AI · SOV-4 Operational · SOV-5 Supply Chain · SOV-6 Technology · SOV-7 Security & Compliance · SOV-8 Environmental | SEAL-0 No Sovereignty → SEAL-1 Jurisdictional → SEAL-2 Data → SEAL-3 Digital Resilience → SEAL-4 Full Digital Sovereignty |
+
+The `/seal` command (or the add-on offered at the end of `/das`) produces:
+
+- a **SEAL level (0–4)** per objective, with evidence and confidence;
+- an adapted weighted **Sovereignty Score (%)** — `Σ (SEALₙ/4) × Weightₙ` (the framework's tender-question points are substituted by the assessed SEAL level);
+- the **minimum SEAL** across objectives (the framework's Minimum Assurance Level); and
+- **recommendations to raise each objective's SEAL level** by one step.
+
+This **complements — it does not replace —** the DAS score. Notably, **Supply Chain (SOV-5), Security & Compliance (SOV-7), and Environmental Sustainability (SOV-8)** are dimensions the DAS S/P scores do not cover. The methodology is documented in [seal-framework.md](assessment/seal-framework.md).
+
+```
+/seal                              # assess the current directory
+/seal ./path/to/project            # assess a local path
+/seal https://github.com/org/repo  # clone and assess a remote repo
+```
+
 ## Document Index
 
 | Document | Description |
@@ -89,6 +114,7 @@ You can also point it at a remote repo: `/das https://github.com/org/repo`
 | [quadrant-and-actions.md](assessment/quadrant-and-actions.md) | Prioritization matrix with detailed action playbooks per quadrant |
 | [reference-assessments.md](assessment/reference-assessments.md) | Worked examples of well-known technology stacks scored under the framework |
 | [automated-signals.md](assessment/automated-signals.md) | Machine-detectable signals for each sub-dimension, specification for future DAS sub-agent |
+| [seal-framework.md](assessment/seal-framework.md) | EU Cloud Sovereignty Framework methodology — 8 Sovereignty Objectives, SEAL levels, adapted scoring (complement to the S-scale) |
 
 ## Wardley Mapping Integration
 
