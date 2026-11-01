@@ -67,7 +67,7 @@ Two complementary dimensions are used to objectively assess any technology compo
 
 ## Sovereignty Scale
 
-A **sovereignty scale** from 0 to 10 rates technologies based on ownership, licensing, and jurisdictional factors.
+A **sovereignty scale** from 0 to 10 rates technologies based on jurisdiction, ownership, governance, and licensing. Within open source, who can change the license matters more than the license itself.
 
 | Score | Description | Examples |
 |:-----:|-------------|----------|
@@ -76,12 +76,12 @@ A **sovereignty scale** from 0 to 10 rates technologies based on ownership, lice
 | **2** | Proprietary technology owned by a private company with headquarters in Europe but outside the EU | Exoscale (CH), Deliveroo (UK), Revolut (UK), Visma (NO) |
 | **3** | Proprietary technology owned by a private company with headquarters within the EU | OVHcloud (FR), SAP (DE), Dassault Systemes (FR) |
 | **4** | Proprietary technology maintained by a private company with source-available licenses | Elasticsearch (NL), MongoDB |
-| **5** | Open-source technology using a least permissive licensing model (GPL, AGPL) | Linux, MySQL, Nextcloud, Mastodon |
-| **6** | Open-source technology using a moderate permissive licensing model (MPL/LGPL) | Firefox, OpenJDK, GNU C Library, Qt Framework |
-| **7** | Open-source technology using a most permissive licensing model (MIT, BSD, Apache) | FreeBSD, Docker, Kubernetes, OpenSearch, TensorFlow, PostgreSQL |
-| **8** | Open-source technology based on federated, open standards | Matrix protocol, ActivityPub, XMPP |
-| **9** | EU-compliant open-source technology | GAIA-X, LibreOffice, OpenStreetMap, Mastodon, Peppol |
-| **10** | Fully normalized technology adopted as an industry/technical standard | HTML, HTTP, TCP/IP, SMTP, PDF |
+| **5** | Open-source technology owned by a single company that holds all the copyright (CLA) and can relicense, whatever the license | MySQL (GPL), Qt (LGPL), Grafana (AGPL), TensorFlow (Apache) |
+| **6** | Open-source technology no one can relicense, but governed by one company or a US-domiciled foundation | Kubernetes, OpenSearch, OpenTofu, Valkey, Firefox, Nextcloud |
+| **7** | Open-source technology no one can relicense, governed by an EU/neutral body or an independent multi-vendor community (permissive license) | Eclipse projects, PostgreSQL |
+| **8** | Same as 7, under a copyleft license: it can be neither relicensed nor enclosed | Linux, LibreOffice |
+| **9** | Federated open protocols with multiple independent implementations | Matrix protocol, ActivityPub, XMPP |
+| **10** | Ratified international standards with multilateral governance | HTML, HTTP, TCP/IP, SMTP, PDF |
 
 ---
 

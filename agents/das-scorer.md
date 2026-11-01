@@ -72,12 +72,12 @@ Detection signals:
 | 0 | Fully vendor-managed SaaS; no source, config, or export access |
 | 1–2 | Vendor-managed with limited configuration |
 | 3–4 | Source-available or partial API access; self-hosting not practically supported |
-| 5–6 | Open-source permissive license; can fork and self-host; limited community beyond original vendor |
-| 7–8 | Open-source copyleft; active community; multiple maintainers; documented self-hosting |
+| 5–6 | Open-source (any OSI license); can fork and self-host; maintenance depends on the original vendor or a few maintainers |
+| 7–8 | Open-source (any OSI license); active community; multiple maintainers; documented self-hosting; a fork would be viable |
 | 9–10 | Multiple independent implementations; fully self-maintainable |
 
 Detection signals:
-- License: AGPL/GPL → S2 ≥ 7; MIT/Apache → S2 ≥ 5; Proprietary → S2 ≤ 2
+- License: any OSI license → S2 ≥ 5 (copyleft does not raise S2; it is credited in S3); source-available (BSL, SSPL, Elastic) → S2 = 3–4; Proprietary → S2 ≤ 2
 - Source present (`.git` dir) → S2 ≥ 4; binary-only deps → flag
 - Self-hosting docs (INSTALL.md, DEPLOYMENT.md, docker-compose, Helm) → S2 +1
 - Heavy vendor SDK usage without abstraction → S2 ≤ 4
@@ -99,7 +99,8 @@ Detection signals:
 - GOVERNANCE.md, MAINTAINERS, CODEOWNERS → parse for structure
 - Contributor diversity from git log: single-domain >80% → S3 ≤ 3; diverse → S3 ≥ 6
 - Foundation affiliation in README, NOTICE → map to jurisdiction
-- CLA with corporate owner → S3 ≤ 4; DCO → neutral
+- CLA or copyright assignment to a corporate owner → S3 ≤ 4 (it can relicense, whatever the license); DCO → neutral
+- Copyleft license (GPL, AGPL, EUPL, MPL, LGPL) with copyright spread across contributors (no CLA, or DCO only) → S3 +1, up to 10
 - Standards references (IETF RFC, W3C, ISO) → S3 ≥ 8
 
 ## Sovereignty Composite

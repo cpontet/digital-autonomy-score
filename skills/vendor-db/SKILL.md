@@ -152,14 +152,14 @@ These are US cloud providers operating under special EU-residency or joint-ventu
 
 ## Licensing Quick Reference
 
-Use this table to inform S2 (Technical Autonomy) scoring based on the license of detected dependencies.
+Use this table to inform S2 (Technical Autonomy) scoring based on the license of detected dependencies. Every OSI license gives the same S2 floor: the right to run, modify and fork. Copyleft is credited in S3 (+1) only when no single company holds the copyright; check for a CLA with the **governance-db** skill.
 
 | License | SPDX ID | S2 Guidance | Notes |
 |---------|---------|-------------|-------|
-| AGPL-3.0 | `AGPL-3.0-only` | S2 ≥ 7 | Strong copyleft, self-hosting friendly |
-| GPL-3.0 | `GPL-3.0-only` | S2 ≥ 7 | Copyleft |
-| EUPL-1.2 | `EUPL-1.2` | S2 ≥ 8 | EU-authored copyleft, compatible with GPL |
-| MPL-2.0 | `MPL-2.0` | S2 ≥ 6 | Weak copyleft, file-level |
+| AGPL-3.0 | `AGPL-3.0-only` | S2 ≥ 5 | Strong copyleft, covers network use; S3 +1 if no corporate CLA |
+| GPL-3.0 | `GPL-3.0-only` | S2 ≥ 5 | Strong copyleft; S3 +1 if no corporate CLA |
+| EUPL-1.2 | `EUPL-1.2` | S2 ≥ 5 | EU-authored copyleft, compatible with GPL; S3 +1 if no corporate CLA |
+| MPL-2.0 | `MPL-2.0` | S2 ≥ 5 | Weak copyleft, file-level; S3 +1 if no corporate CLA |
 | Apache-2.0 | `Apache-2.0` | S2 ≥ 5 | Permissive + patent grant |
 | MIT | `MIT` | S2 ≥ 5 | Permissive |
 | BSD-3-Clause | `BSD-3-Clause` | S2 ≥ 5 | Permissive |

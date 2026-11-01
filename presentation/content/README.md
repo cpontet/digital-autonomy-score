@@ -34,4 +34,4 @@ The presentation explores why digital sovereignty matters for Europe today, exam
 
 ## Source
 
-Original presentation (in French): [`docs/Geopolitique et souverainete numerique - enjeux, implications et opportunites.pdf`](../Géopolitique%20et%20souveraineté%20numérique%20-%20enjeux,%20implications%20et%20opportunités.pdf)
+Original talk (in French), Voxxed Days Luxembourg, June 2025: [video and slides](https://cedricpontet.com/talks/digital-sovereignty-geopolitics).

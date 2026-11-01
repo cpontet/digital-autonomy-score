@@ -39,7 +39,7 @@ This document maps machine-detectable signals to each sovereignty and portabilit
 
 | Signal | Detection Method | Scoring Impact |
 |--------|-----------------|----------------|
-| License detection (SPDX) | Scan `LICENSE`, `COPYING` files; parse SPDX identifiers in package manifests; use license detection tools | AGPL/GPL → S2 ≥ 7; MIT/Apache → S2 ≥ 5; Proprietary → S2 ≤ 2 |
+| License detection (SPDX) | Scan `LICENSE`, `COPYING` files; parse SPDX identifiers in package manifests; use license detection tools | Any OSI license → S2 ≥ 5 (copyleft is credited in S3, not S2); BSL/SSPL/Elastic → S2 = 3–4; Proprietary → S2 ≤ 2 |
 | Source availability | Check if source code is present (not just binaries); check for `.git` directory | Source present → S2 ≥ 4; binary-only dependencies → flag |
 | Dependency license audit | Run `license-checker` (npm), `pip-licenses` (Python), `license_finder` (Ruby/multi) | Aggregate license profile; flag proprietary transitive dependencies |
 | Self-hosting documentation | Check for `INSTALL.md`, `DEPLOYMENT.md`, `docker-compose.yml`, Helm charts | Presence → S2 +1; absence → S2 -1 |
@@ -61,7 +61,7 @@ This document maps machine-detectable signals to each sovereignty and portabilit
 | Governance metadata | Check for `GOVERNANCE.md`, `MAINTAINERS`, `CODEOWNERS`; look for foundation affiliation | EU foundation → S3 ≥ 7; US foundation → S3 = 5–6; single company → S3 ≤ 3 |
 | Contributor diversity | Analyze Git log for email domains; assess commit concentration (bus factor) | Single-domain dominance (>80%) → S3 ≤ 3; diverse → S3 ≥ 6 |
 | Foundation affiliation | Check README, NOTICE, website links for foundation mentions (Apache, Linux Foundation, Eclipse, CNCF) | Map foundation to jurisdiction and governance model |
-| CLA/DCO requirements | Check for `CLA.md`, `.github/cla.yml`, DCO sign-off in commits | CLA with corporate owner → S3 ≤ 4; DCO → neutral |
+| CLA/DCO requirements | Check for `CLA.md`, `.github/cla.yml`, DCO sign-off in commits | CLA or copyright assignment to a corporate owner → S3 ≤ 4 (it can relicense); DCO → neutral; copyleft license with no corporate CLA → S3 +1 |
 | Standards compliance | Check for references to IETF RFC, W3C spec, ISO standard numbers in docs or code comments | Standards references → S3 ≥ 8 |
 
 **Files to scan:**

@@ -94,7 +94,7 @@ Some significant projects are community-governed without a formal foundation:
 | Arch Linux | Trusted User system | S3 = 6 | `archlinux.org` |
 | PostgreSQL (PGDG) | PostgreSQL Global Development Group, meritocratic | S3 = 7 | `postgresql.org`, PGDG mentions |
 | MariaDB | MariaDB Foundation (FI) | S3 = 7 | `mariadb.org`, MariaDB Foundation mentions |
-| Nextcloud | Nextcloud GmbH (DE) | EU-based, AGPLv3 | S3 = 4–5 | `nextcloud.com`, Nextcloud CLA |
+| Nextcloud | Nextcloud GmbH (DE), AGPLv3, DCO (no CLA) | S3 = 4–5 (+1 for copyleft without CLA) | `nextcloud.com`, `Signed-off-by` in commits |
 | Keycloak | Red Hat (IBM) → CNCF incubating | S3 = 5 | `keycloak.org`, CNCF status |
 
 ## CLA vs DCO
@@ -106,6 +106,8 @@ Some significant projects are community-governed without a formal foundation:
 | CLA with foundation (Apache ICLA, Eclipse CLA) | Neutral | Rights held by non-profit |
 | CLA with corporate owner | S3 -1 to -2 | Company accumulates IP rights; can relicense |
 | CLA with relicensing rights | S3 -2 to -3 | Company can switch to proprietary (as HashiCorp, Redis, Elastic did) |
+
+A CLA or copyright assignment to a company caps S3 at 4 whatever the license: MongoDB was AGPL and Terraform was MPL when their owners relicensed them. Conversely, a copyleft license (GPL, AGPL, EUPL, MPL, LGPL) with no corporate CLA earns S3 +1, because no one can take the project closed.
 
 Detection: search for `CLA`, `CONTRIBUTING.md` mentioning contributor agreements, `.github/CLA.md`, `DCO`, `Signed-off-by` in commit messages.
 

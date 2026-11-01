@@ -11,8 +11,8 @@ DAS produces two scores for any technology component or system:
 Digital sovereignty measures the degree to which an organisation retains autonomous control over a technology system — free from foreign legal compulsion, single-vendor dependency, or external governance capture. It is assessed across three sub-dimensions:
 
 - **S1 — Legal & Jurisdictional Exposure**: Where is data stored and processed? Which legal framework governs the vendor relationship? A system hosted by a US company falls under the CLOUD Act, meaning a foreign government can compel access to your data regardless of where the servers sit physically.
-- **S2 — Technical Autonomy**: Can you run, modify, and maintain the technology independently? A proprietary SaaS with no source access and no self-hosting option leaves you entirely dependent on the vendor's continuity and goodwill. Open-source with copyleft licensing scores higher than permissive licensing because it structurally prevents proprietary capture.
-- **S3 — Governance Independence**: Who controls the technology's roadmap and evolution? A project governed by a single US corporation carries different risks than one governed by an EU foundation or an international standards body. Governance determines whether the technology can be steered away from your interests.
+- **S2 — Technical Autonomy**: Can you run, modify, and maintain the technology independently? A proprietary SaaS with no source access and no self-hosting option leaves you entirely dependent on the vendor's continuity and goodwill. Any open-source license gives you the right to run, modify, and fork.
+- **S3 — Governance Independence**: Who controls the technology's roadmap and evolution, and who can change its license? A project governed by a single US corporation carries different risks than one governed by an EU foundation or an international standards body. A company that holds all the copyright can relicense future versions even under copyleft, as MongoDB (AGPL) and HashiCorp (MPL) did; copyleft only protects against capture when the copyright is spread across contributors.
 
 The sovereignty score ranges from **0** (proprietary system under foreign legal jurisdiction with no autonomy) to **10** (ratified international standard with multilateral governance and multiple independent implementations). Legal exposure is weighted highest (40%) because legal compulsion can override all technical safeguards.
 
@@ -134,10 +134,12 @@ DAS also complements Core Domain Charts (to prioritize business-critical systems
 
 ## Author
 
-**Cédric Pontet** — CTO at [Agile Partner](https://www.agilepartner.net/), Luxembourg.
+**Cédric Pontet** — [cedricpontet.com](https://cedricpontet.com), Luxembourg.
 
 ## License
 
-This work is licensed under [Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/).
+Copyright © 2026 Cédric Pontet. Licensed under the [European Union Public Licence v. 1.2 (EUPL-1.2)](LICENSE).
+
+Third-party material keeps its own terms: the bundled EU Cloud Sovereignty Framework document is © European Union and reused under the Commission's reuse policy.
 
 [Wardley Mapping](https://wardleymaps.com) is courtesy of Simon Wardley, CC BY-SA 4.0.

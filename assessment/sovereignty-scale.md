@@ -4,9 +4,17 @@
 
 The DAS sovereignty scale addresses several challenges that arise when attempting to score sovereignty on a single 0–10 axis:
 
-### Why Copyleft Ranks Above Permissive Licenses
+### Who Can Change the License Matters More Than the License
 
-**Copyleft licenses prevent proprietary capture.** A GPL-licensed project cannot be taken proprietary by a vendor — it structurally preserves sovereignty. Permissive licenses (MIT, Apache) allow any party to create closed forks, reducing long-term sovereignty guarantees. Therefore, strong copyleft (GPL, AGPL) scores higher than permissive (MIT, BSD, Apache).
+**A copyleft license does not stop its copyright holder.** MongoDB was AGPL before it moved to SSPL in 2018; Terraform was MPL before it moved to BSL in 2023. In both cases a single company held all the copyright, through a Contributor License Agreement (CLA), and could relicense future versions at will. Linux, by contrast, can never be relicensed: its copyright is spread across thousands of contributors who never assigned it.
+
+The open-source band of the scale is therefore ordered by three questions, in this order:
+
+1. **Can a single party relicense?** If one company holds all the copyright, the project sits at 5 whatever its license.
+2. **Who governs the roadmap?** One company or a US-domiciled foundation (6), or an EU/neutral body or a multi-vendor community no one controls (7).
+3. **Is the license copyleft?** Only among projects no one can relicense does the license type make the difference (8): copyleft then prevents anyone from enclosing the commons with closed derivatives, which permissive licenses (MIT, BSD, Apache) allow.
+
+Every OSI license, copyleft or permissive, gives you the right to fork the last open version — which is how OpenSearch, OpenTofu and Valkey came about. That is why all of open source sits above source-available (4).
 
 ### Three Independent Dimensions
 
@@ -33,18 +41,18 @@ The refined scale corrects the ordering and provides clearer criteria. The key p
 | **2** | Proprietary, EU-Adjacent | Proprietary software from European but non-EU countries (UK, Switzerland, Norway). Partial regulatory alignment but outside EU jurisdiction. | Exoscale (CH), Deliveroo (UK), Visma (NO) |
 | **3** | Proprietary, EU | Proprietary software from an EU-headquartered vendor. Subject to EU law, but source unavailable — dependency on vendor continuity. | OVHcloud (FR), SAP (DE), Dassault Systèmes (FR) |
 | **4** | Source-Available | Source code is viewable but usage is restricted by non-open-source licenses (BSL, SSPL, Elastic License). Vendor can change terms; forks may be legally constrained. | Elasticsearch (SSPL→proprietary→AGPL journey), MongoDB (SSPL), HashiCorp (BSL) |
-| **5** | Open-Source Permissive, US-Governed | Open-source with permissive license (MIT, BSD, Apache 2.0) but governance controlled by a US entity. Permissive license allows proprietary forks. | Kubernetes (CNCF/Linux Foundation), TensorFlow (Google/Apache 2.0), PostgreSQL (PGDG, US-based) |
-| **6** | Open-Source Permissive, EU/Neutral Governance | Open-source with permissive license, governed by an EU or jurisdiction-neutral entity. Same license risk as score 5, but governance is outside US reach. | Eclipse IDE (Eclipse Foundation, Belgium), OpenSearch (Linux Foundation but Apache 2.0) |
-| **7** | Open-Source Copyleft, Weak | Open-source with weak copyleft (LGPL, MPL). Modifications must stay open, but linking/embedding with proprietary code is permitted. Moderate enclosure resistance. | Firefox (MPL), GNU C Library (LGPL), Qt Framework (LGPL) |
-| **8** | Open-Source Copyleft, Strong | Open-source with strong copyleft (GPL, AGPL). Derivative works must remain open-source. Strong structural protection against proprietary capture. | Linux (GPL), MySQL (GPL), Nextcloud (AGPL), Mastodon (AGPL) |
+| **5** | Open-Source, Single Owner | OSI license, but one company holds all the copyright (CLA or copyright assignment) and can relicense future versions. The license type does not change this. | MySQL (GPL, Oracle), Qt (LGPL, The Qt Company), Grafana (AGPL, Grafana Labs), TensorFlow (Apache 2.0, Google), MongoDB before 2018 (AGPL), Terraform before 2023 (MPL) |
+| **6** | Open-Source, Controlled Governance | No single party can relicense (copyright spread across contributors or held by a foundation), but the roadmap is controlled by one company or by a US-domiciled foundation. | Kubernetes (CNCF), OpenSearch, OpenTofu and Valkey (Linux Foundation), Firefox (MPL, Mozilla), Nextcloud (AGPL, DCO, roadmap set by Nextcloud GmbH) |
+| **7** | Open-Source, Independent Governance | No single party can relicense, and governance sits with an EU or jurisdiction-neutral body, or with a multi-vendor community no single company controls. Permissive license. | Eclipse projects (Eclipse Foundation, Belgium), PostgreSQL (PGDG) |
+| **8** | Open-Source, Independent Governance, Copyleft | As 7, under a copyleft license (GPL, AGPL, EUPL; MPL and LGPL at file or library level). Improvements must stay open: the project can be neither relicensed nor enclosed. | Linux (GPL-2.0), LibreOffice (MPL-2.0, The Document Foundation, Germany) |
 | **9** | Federated Open Protocols | Open-source with strong licenses AND based on federated, open protocols with multiple independent implementations. No single entity can control the ecosystem. | Matrix protocol (multiple clients/servers), ActivityPub ecosystem (Mastodon, PeerTube, Pixelfed), XMPP |
 | **10** | Ratified International Standards | Ratified by international standards bodies (IETF, W3C, ISO, OASIS). Governance is multilateral. Multiple independent implementations exist. | HTTP/2 (IETF RFC 7540), HTML5 (W3C), PDF (ISO 32000), SQL (ISO 9075), SMTP (IETF RFC 5321) |
 
 ### Scale Design Highlights
 
-1. **Copyleft at 8**: GPL/AGPL provides structural sovereignty protection — prevents proprietary capture
-2. **Permissive at 5–6**: MIT/Apache/BSD allow proprietary forks, scoring lower than copyleft
-3. **Governance split**: scores 5 vs. 6 distinguish US-governed from EU/neutral-governed projects with the same license type
+1. **Relicensing power first**: a project one company can relicense sits at 5, even under AGPL
+2. **Governance next**: scores 6 vs. 7 distinguish company or US-foundation control from EU/neutral or community governance
+3. **License last**: copyleft lifts a project from 7 to 8 only when no one can relicense it
 4. **Score 9 requires federation**: both open protocol AND multiple independent implementations — no single entity can control the ecosystem
 5. **Score 10 is multilateral**: specifically ratified *international* standards with multilateral governance (IETF, W3C, ISO)
 
@@ -76,13 +84,15 @@ For thorough assessments, sovereignty breaks into three sub-dimensions. Each sco
 | 0 | Fully vendor-managed SaaS; no access to source, configuration, or data export |
 | 1–2 | Vendor-managed with limited configuration; data export possible but incomplete |
 | 3–4 | Source-available or partial API access; could theoretically self-host but not practically supported |
-| 5–6 | Open-source with permissive license; can fork and self-host; but limited community beyond original vendor |
-| 7–8 | Open-source with copyleft; active community; multiple maintainers; documented self-hosting |
+| 5–6 | Open-source (any OSI license); can fork and self-host; but maintenance depends on the original vendor or a few maintainers |
+| 7–8 | Open-source (any OSI license); active community; multiple maintainers; documented self-hosting; a fork would be viable |
 | 9–10 | Multiple independent implementations; reference implementations available; can fully self-maintain with in-house skills |
+
+The license type does not raise S2: every OSI license grants the right to run, modify and fork. Copyleft is credited in S3, where it protects against enclosure.
 
 ### S3: Governance Independence
 
-*Who controls the technology's evolution? Can the roadmap be influenced or blocked by a foreign entity?*
+*Who controls the technology's evolution, and who can change its license? Can the roadmap be influenced or blocked by a foreign entity?*
 
 | Score | Criteria |
 |:-----:|----------|
@@ -92,6 +102,11 @@ For thorough assessments, sovereignty breaks into three sub-dimensions. Each sco
 | 5–6 | Foundation-governed (Apache, Linux Foundation) with broad contributor base but US-domiciled foundation |
 | 7–8 | EU/neutral foundation governance (Eclipse Foundation, CERN); multiple major contributors; no single-entity veto |
 | 9–10 | International standards body (IETF, W3C, ISO); multilateral governance; changes require broad consensus |
+
+**Modifiers:**
+
+- **Relicensing power**: one company holds all the copyright through a CLA or copyright assignment → S3 ≤ 4, whatever the license. It can relicense future versions, as MongoDB, HashiCorp, Elastic and Redis did.
+- **Enclosure resistance**: copyleft license (GPL, AGPL, EUPL, MPL, LGPL) *and* copyright spread across contributors (no CLA, or DCO only) → S3 +1, up to 10. Improvements must stay open, and no one can take the project closed.
 
 ### Combining Sub-Dimensions
 

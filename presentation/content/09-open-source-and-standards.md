@@ -22,7 +22,7 @@ The **OpenTofu** story illustrates how open-source communities can respond when 
 
 ### The License Change
 
-In August 2023, **HashiCorp** announced that **Terraform** would move from the permissive open-source **MPL (Mozilla Public License)** to the more restrictive **BSL (Business Source License)**. This change worried many users, cloud vendors, and tech companies because BSL restricts use in some commercial scenarios and ends further contributions to truly open infrastructure tooling.
+In August 2023, **HashiCorp** announced that **Terraform** would move from the open-source **MPL (Mozilla Public License)**, a weak copyleft license, to the more restrictive **BSL (Business Source License)**. This change worried many users, cloud vendors, and tech companies because BSL restricts use in some commercial scenarios and ends further contributions to truly open infrastructure tooling.
 
 ### The Community Response
 
